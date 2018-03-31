@@ -49,6 +49,10 @@ function liriCommand(input1, searchTerm) {
         case "do-what-it-says":
             doWhatItSays();
             break;
+
+        case "command-list":
+            listCommands();
+            break;
     };
 };
 
@@ -184,4 +188,14 @@ function doWhatItSays() {
         liriCommand(input1, searchTerm);
 
     });
+};
+
+function listCommands() {
+    console.log("----------------------------------");
+    console.log("Liri is a helpful command line assistant that can handle the following commands:")
+    console.log("1. my-tweets: This command will print the last 20 tweets of the authenticated user along with the tweet date and time.")
+    console.log("2. spotify-this-song: Using this command followed by a song title will return Spotify information for that track.")
+    console.log("3. movie-this: This command followed by the title of a movie will return OMDB information on the searched movie.")
+    console.log("4. do-what-it-says: Using this command will pull whatever command and search term is in the random.txt file and run that command.")
+    console.log("----------------------------------");
 };
